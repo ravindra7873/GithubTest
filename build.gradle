@@ -1,16 +1,35 @@
 apply plugin: 'java'
 
-sourceCompatibility = 1.8
-
 repositories {
     jcenter()
     mavenCentral()
 }
 
 dependencies {
-
-    testCompile group: 'org.testng', name: 'testng', version: '6.8'
+    testCompile group: 'log4j', name: 'log4j', version: '1.2.17'
     testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.+'
+    testCompile group: 'cn.guoyukun.jdbc', name: 'oracle-ojdbc6', version: '11.2.0.3.0'
+    testCompile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+    testCompile group: 'com.jcraft', name: 'jsch', version: '0.1.46'
+    testCompile group: 'org.json', name: 'json', version: '20080701'
+    testCompile 'org.apache.cxf:cxf-rt-rs-client:3.0.0'
+    testCompile files ("executables/sf-common-utils-1.0.jar")
+    testCompile 'com.squareup.okhttp3:okhttp:3.4.1'
+    testCompile group: 'com.squareup.okio', name: 'okio', version: '1.11.0'
+    //JavaMail
+    testCompile group: 'javax.mail', name: 'mail', version: '1.4.1'
+    testCompile group: 'net.sourceforge.jexcelapi', name: 'jxl', version: '2.6.12'
+    testCompile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
+    testCompile group: 'com.github.javafaker', name: 'javafaker', version: '0.10'
+    testCompile 'org.testng:testng:6.9.12'
+    testCompile 'junit:junit:4.11'
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+    compile group: 'com.opencsv', name: 'opencsv', version: '3.3'
+    compile group: 'net.sourceforge.javacsv', name: 'javacsv', version: '2.0'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '3.0.1'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.6'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.2.1'
 
 }
 compileTestJava.options.encoding = 'UTF-8'
@@ -19,16 +38,11 @@ sourceCompatibility = 1.7
 test {
     //systemProperty 'Operation', 'linux'
     useTestNG()
-    include 'java/Test1.class'
+    include 'Test1.class'
     afterSuite { suite, result ->
         result.exception?.printStackTrace()
     }
-	task wrapper(type: Wrapper) {
-        gradleVersion = '4.0'
-    }
 }
-
-    
-
-
-
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.2.1'
+}
