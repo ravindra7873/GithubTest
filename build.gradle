@@ -1,0 +1,33 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile group: 'org.testng', name: 'testng', version: '6.8'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.+'
+
+}
+compileTestJava.options.encoding = 'UTF-8'
+sourceCompatibility = 1.7
+
+test {
+    systemProperty 'Operation', 'linux'
+    useTestNG()
+    include 'java/Test1.class'
+    afterSuite { suite, result ->
+        result.exception?.printStackTrace()
+    }
+}
+
+    task wrapper(type: Wrapper) {
+        gradleVersion = '4.0'
+    }
+
+
+
