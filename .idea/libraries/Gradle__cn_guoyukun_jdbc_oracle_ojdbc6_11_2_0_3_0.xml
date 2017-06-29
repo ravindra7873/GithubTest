@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: cn.guoyukun.jdbc:oracle-ojdbc6:11.2.0.3.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.guoyukun.jdbc/oracle-ojdbc6/11.2.0.3.0/de96f0060c7353532f4cb4a0b73d20545580fc91/oracle-ojdbc6-11.2.0.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.guoyukun.jdbc/oracle-ojdbc6/11.2.0.3.0/51e207a0a87a3dca7010331e953b3e4c3d99b7ea/oracle-ojdbc6-11.2.0.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
