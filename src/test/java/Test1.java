@@ -10,7 +10,7 @@ public class Test1 {
     @Test
     public void test(){
        System.out.println("This is first Test");
-       Assert.assertEquals(true,true);
+       Assert.assertEquals(true,false);
 
     }
 }
