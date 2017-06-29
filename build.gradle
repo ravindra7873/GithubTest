@@ -23,11 +23,12 @@ test {
     afterSuite { suite, result ->
         result.exception?.printStackTrace()
     }
-}
-
-    task wrapper(type: Wrapper) {
+	task wrapper(type: Wrapper) {
         gradleVersion = '4.0'
     }
+}
+
+    
 
 
 
