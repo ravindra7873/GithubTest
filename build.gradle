@@ -17,7 +17,7 @@ compileTestJava.options.encoding = 'UTF-8'
 sourceCompatibility = 1.7
 
 test {
-    systemProperty 'Operation', 'linux'
+    //systemProperty 'Operation', 'linux'
     useTestNG()
     include 'java/Test1.class'
     afterSuite { suite, result ->
